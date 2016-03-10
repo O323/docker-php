@@ -15,4 +15,7 @@ RUN apt-get update && apt-get install -y \
     && mv composer.phar /usr/local/bin/composer \
     && curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar \
     && mv phpcs.phar /usr/local/bin/phpcs \
-    && chmod +x /usr/local/bin/phpcs
+    && chmod +x /usr/local/bin/phpcs \
+    && curl -OL http://static.phpmd.org/php/latest/phpmd.phar \
+    && mv phpmd.phar /usr/local/bin/phpmd \
+    && chmod +x /usr/local/bin/phpmd
