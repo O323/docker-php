@@ -13,9 +13,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install -j$(nproc) gd \
     && curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer \
-    && curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar \
-    && mv phpcs.phar /usr/local/bin/phpcs \
+    && curl -Lo /usr/local/bin/phpcs https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar \
     && chmod +x /usr/local/bin/phpcs \
-    && curl -OL http://static.phpmd.org/php/latest/phpmd.phar \
-    && mv phpmd.phar /usr/local/bin/phpmd \
+    && curl -Lo /usr/local/bin/phpmd http://static.phpmd.org/php/latest/phpmd.phar \
     && chmod +x /usr/local/bin/phpmd
