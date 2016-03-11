@@ -1,5 +1,6 @@
 FROM php:latest
 RUN apt-get update && apt-get install -y \
+        jq \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libmcrypt-dev \
