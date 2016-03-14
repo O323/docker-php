@@ -19,3 +19,4 @@ RUN apt-get update && apt-get install -y \
 RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 RUN curl -Lo /usr/local/bin/phpcs https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && chmod +x /usr/local/bin/phpcs
 RUN curl -Lo /usr/local/bin/phpmd http://static.phpmd.org/php/latest/phpmd.phar && chmod +x /usr/local/bin/phpmd
+RUN curl -Lo /usr/local/bin/phpmetrics https://github.com/phpmetrics/PhpMetrics/raw/master/build/phpmetrics.phar && chmod +x /usr/local/bin/phpmetrics
